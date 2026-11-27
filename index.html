@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <title>Happy Birthday! 🎂</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<button id="sound-toggle" title="Toggle Sound" aria-label="Toggle Sound">🔊</button>
+
+<!-- ══════════════════════════════════════
+     SCENE 1 — ULTRA-REALISTIC SWIPE CRICKET
+══════════════════════════════════════ -->
+<div id="scene-cricket" class="scene active">
+  <canvas id="cricketCanvas"></canvas>
+  <div id="cricket-hud">
+    <div id="cricket-score-badge">Runs: <span id="cricket-runs">0</span> / 24 &nbsp;|&nbsp; Target: <strong>24</strong></div>
+    <div id="cricket-shot-banner" class="hidden"></div>
+  </div>
+  <div id="swipe-hint">🏏 Swipe when the ball nears the crease to hit 1, 2, 3, 4, or 6!</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCENE 2 — REALISTIC FIRECRACKERS
+══════════════════════════════════════ -->
+<div id="scene-fireworks" class="scene">
+  <canvas id="fwCanvas"></canvas>
+  <div id="fw-label">🧨 24 RUNS! Firecrackers! 🎆</div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCENE 3 — 3-LAYER CHOCOLATE CAKE + CANDLE
+══════════════════════════════════════ -->
+<div id="scene-cake" class="scene">
+  <div id="cake-wrap">
+    <div id="candle-area" class="cake-part">
+      <div id="flame" class="flickering"></div>
+      <div id="candle-body"></div>
+      <div id="candle-drip"></div>
+    </div>
+
+    <div id="cake">
+      <div class="layer layer1 cake-part">
+        <div class="deco-row">
+          <span class="berry">🍓</span><span class="berry">🍓</span><span class="berry">🍓</span>
+          <span class="berry">🍓</span><span class="berry">🍓</span>
+        </div>
+        <div class="frosting-top"></div>
+        <div class="cake-body"></div>
+      </div>
+      <div class="layer layer2 cake-part">
+        <div class="frosting-top"></div>
+        <div class="cake-body"></div>
+      </div>
+      <div class="layer layer3 cake-part">
+        <div class="frosting-top"></div>
+        <div class="cake-body"></div>
+      </div>
+      <div id="cake-plate" class="cake-part"></div>
+    </div>
+
+    <div id="blow-instructions" class="hidden">🎤 Blow on mic 3 times (or tap here) to blow out the candle!</div>
+    <div id="blow-counter" class="hidden">Blows: <span id="blow-num">0</span> / 3</div>
+    <div id="hb-message" class="hidden">
+      <span>H</span><span>a</span><span>p</span><span>p</span><span>y</span>
+      <span>&nbsp;</span>
+      <span>B</span><span>i</span><span>r</span><span>t</span><span>h</span><span>d</span><span>a</span><span>y</span>
+      <span>!</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     SCENE 4 — ANIMATED TREE + SHAKE FRUITS + MEMORIES + QUOTE
+══════════════════════════════════════ -->
+<div id="scene-tree" class="scene">
+  <canvas id="treeCanvas"></canvas>
+  <div id="tree-photos"></div>
+  <div id="tree-title">🌳 Memories Tree 🌳</div>
+
+  <div id="shake-prompt" class="hidden">
+    <div id="shake-text">🌳 Shake or Tap the Tree to drop the fruits!</div>
+    <button id="shake-btn">🍂 Shake Tree</button>
+  </div>
+
+  <div id="photo-spotlight" class="hidden">
+    <div id="spotlight-card">
+      <img id="spotlight-img" src="" alt="Memory" />
+      <div id="spotlight-caption">Memory <span id="spotlight-num">1</span> / 12</div>
+    </div>
+  </div>
+
+  <div id="quote-overlay" class="hidden">
+    <div id="quote-card">
+      <div class="quote-icon">✨</div>
+      <blockquote id="quote-text">
+        "Life is not measured by the number of breaths we take, but by the moments that take our breath away. Keep shining, keep growing, and make every year your greatest innings yet!"
+      </blockquote>
+      <div id="quote-sub">— Wishing You a Wonderful Year Ahead —</div>
+      <button id="replay-btn">🔄 Replay Celebration</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
